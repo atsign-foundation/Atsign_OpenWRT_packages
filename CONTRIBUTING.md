@@ -8,7 +8,6 @@ for fixing issues or adding features. Thanks for your contribution!
 Please read our [code of conduct](code_of_conduct.md), which is based on
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
 
-
 For small changes, especially documentation, you can simply use the "Edit" button
 to update the Markdown file, and start the
 [pull request](https://help.github.com/articles/about-pull-requests/) process.
@@ -21,38 +20,28 @@ the results of the pipeline and correct any mistakes that are reported.
 If you plan to contribute often or have a larger change to make, it is best to
 setup an environment for contribution, which is what the rest of these guidelines
 describe. The atsign-foundation GitHub organization's conventions and configurations are documented
-[here](https://github.com/atsign-foundation/.github/blob/trunk/atGitHub.md).
-
-## Development Environment Setup
-
-
-### Prerequisites
-
-   ``` sh
-   # show how to install the tools needed to work with the code here
-   ```
-
+[here](https://github.com/atsign-foundation/.github/blob/trunk/docs/atGitHub.md).
 
 ### GitHub Repository Clone
 
 To prepare your dedicated GitHub repository:
 
-1. Fork in GitHub https://github.com/atsign-foundation/REPO
-2. Clone *your forked repository* (e.g., `git clone git@github.com:yourname/REPO`)
+1. Fork in GitHub https://github.com/atsign-foundation/Atsign_OpenWRT_packages
+2. Clone *your forked repository* (e.g., `git clone git@github.com:yourname/Atsign_OpenWRT_packages`)
 3. Set your remotes as follows:
 
    ```sh
-   cd REPO
-   git remote add upstream git@github.com:atsign-foundation/REPO.git
+   cd Atsign_OpenWRT_packages
+   git remote add upstream git@github.com:atsign-foundation/Atsign_OpenWRT_packages.git
    git remote set-url upstream --push DISABLED
    ```
 
    Running `git remote -v` should give something similar to:
 
    ```text
-   origin  git@github.com:yourname/REPO.git (fetch)
-   origin  git@github.com:yourname/REPO.git (push)
-   upstream        git@github.com:atsign-foundation/REPO.git (fetch)
+   origin  git@github.com:yourname/Atsign_OpenWRT_packages.git (fetch)
+   origin  git@github.com:yourname/Atsign_OpenWRT_packages.git (push)
+   upstream        git@github.com:atsign-foundation/Atsign_OpenWRT_packages.git (fetch)
    upstream        DISABLED (push)
    ```
 
@@ -94,29 +83,6 @@ To prepare your dedicated GitHub repository:
    ```
 
 1. Open a new Pull Request to the main repository using your `trunk` branch
-
-
-## atLibrary release process
-
-The Atsign Foundation produces several widgets and libraries that the app developer
-can make use of to develop apps on atProtocol. These libraries are developed in
-Dart & Flutter and published to [pub.dev](https://pub.dev/publishers/atsign.org/packages).
-
-![alt_text](images/image1.png "Version flow")
-
-## Following the changes
-
-The Atsign Foundation publishes libraries and widgets to
-[https://pub.dev/publishers/atsign.org/packages](https://pub.dev/publishers/atsign.org/packages).
-Each of these libraries contains a tab called “Changelog” that shows various
-published versions and a short description of what changes that went in.
-
-![alt_text](images/image2.png "Changelog screenshot")
-
-Also the “Versions” tab shows the versions published in the reverse
-chronological order.
-
-![alt_text](images/image3.png "Versions screenshot")
 
 ## Reporting a bug
 

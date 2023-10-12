@@ -1,73 +1,49 @@
 <img width=250px src="https://atsign.dev/assets/img/atPlatform_logo_gray.svg?sanitize=true">
 
-# Sample README
+# Atsign OpenWRT packages
 
-Open with intent - we welcome contributions - we want pull requests and to hear about issues.
+This repo contains the source code to build packages for
+[OpenWRT](https://openwrt.org/), a Linux operating system targeting embedded
+devices.
 
-## Who is this for?
+OpenWRT is very popular with device manufacturers, and we want to make it
+easy to run our stuff there.
 
-The README should be addressed to somebody who's never seen this before.
-But also don't assume that they're a novice.
+## Packages
 
-### Code user
+### lang/python/atpython
 
-Does this repo publish to [pub.dev](https://pub.dev) or similar?
-In which case the code user just needs a pointer there - e.g. [at_client on pub.dev](https://pub.dev/packages/at_client)
+This package ontains our
+[Python SDK](https://github.com/atsign-foundation/at_python)
+
+## Development Environment Setup
+
+Please start by setting up an OpenWRT toolchain following the steps in their
+[Developer guide](https://openwrt.org/docs/guide-developer/start)
+
+If you've got past
+["Hello World!" for OpenWRT](https://openwrt.org/docs/guide-developer/helloworld/start)
+then you're ready to use this.
+
+### Using this repo as a feed
+
+First clone this repo from GitHub.
+
+Then create a `feeds.conf` in the root of the OpenWRT build tree e.g.:
+
+```
+src-link atsign /home/chris/git/github.com/atsign-foundation/Atsign_OpenWRT_packages/packages
+```
+
+You'll need to change `/home/chris/git/github.com/atsign-foundation/`
+to wherever you cloned this repo.
 
 ### Contributor
 
-This is the person who we want working with us here.
-[CONTRIBUTING.md](CONTRIBUTING.md) is going to have the detailed guidance on how to setup their tools,
-tests and how to make a pull request.
-
-## Why, What, How?
-
-### Why?
-
-What is the purpose of this project?
-
-### What?
-
-What is needed to get the project and its dependencies installed?
-
-### How?
-
-How does this work? How is this used to fulfil its intended purpose?
-
-## Checklist
-
-### Writing
-
-Does the writing flow, with proper grammar and correct spelling?
-
-### Links
-
-Are the links to external resources correct?
-Are the links to other parts of the project correct
-(beware stuff carried over from previous repos where the
-project might have lived during earlier development)?
-
-### Description
-
-Has the Description field been filled out?
-
-### Acknowledgement/Attribution
-
-Have we correctly acknowledged the work of others (and their Trademarks etc.)
-where appropriate (per the conditions of their LICENSE?
-
-### LICENSE
-
-Which LICENSE are we using?  
-Is the LICENSE(.md) file present?  
-Does it have the correct dates, legal entities etc.?
+If you'd like to add, modify or improve what's here then please take a look at
+[CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidance on how to make a pull
+request.
 
 ## Maintainers
 
-Who created this?  
-
-Do they have complete GitHub profiles?  
-
-How can they be contacted?  
-
-Who is going to respond to pull requests?  
+Created by [@cpswan](https://github.com/cpswan)
