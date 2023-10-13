@@ -28,7 +28,15 @@ define Package/python3-sshnpdpy
   SUBMENU:=Python
   TITLE:=Python SDK for the atPlatform
   URL:=https://github.com/atsign-foundation/at_python
-  DEPENDS:= python3-atpython
+  DEPENDS:=\
+      +python3-light \
+      +python3-atpython \
+	  +python3-bcrypt \
+	  +python3-cffi \
+	  +python3-cryptography \
+	  +python3-paramiko \
+	  +python3-pycparser \
+	  +python3-pynacl
 endef
 
 define Package/python3-sshnpdpy/description
