@@ -10,8 +10,10 @@ PKG_VERSION:=0.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/atsign-foundation/sshnoports/packages/sshnpdpy
+PKG_SOURCE_URL:=https://github.com/atsign-foundation/sshnoports
 PKG_SOURCE_VERSION:=074699a29e31688dcba8b79fd55433e25c68355e
+
+PYTHON3_PKG_SETUP_DIR=packages/sshnpdpy
 
 PKG_LICENSE:=BSD-3-Clause
 PKG_LICENSE_FILES:=LICENSE
