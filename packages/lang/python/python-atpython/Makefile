@@ -6,18 +6,16 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=at_python
-PKG_VERSION:=0.0.2
+PKG_VERSION:=0.0.3
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/atsign-foundation/at_python
-PKG_SOURCE_VERSION:=20886b28cbf7ea2498988d4bcfdc84a4b51e458e
+PKG_SOURCE_VERSION:=4da03279fa174a1fa2ab59b3d6e4aeb2b4f8d978
 
 PKG_LICENSE:=BSD-3-Clause
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=Chris Swan <@cpswan>
-
-PKG_BUILD_DEPENDS:=python-poetry-core/host
 
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
@@ -46,3 +44,4 @@ endef
 
 $(eval $(call Py3Package,python3-atpython))
 $(eval $(call BuildPackage,python3-atpython))
+$(eval $(call BuildPackage,python3-atpython-src))
