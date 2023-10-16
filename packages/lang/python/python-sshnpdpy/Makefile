@@ -33,12 +33,12 @@ define Package/python3-sshnpdpy
   DEPENDS:=\
       +python3-light \
       +python3-atpython \
-	  +python3-bcrypt \
-	  +python3-cffi \
-	  +python3-cryptography \
-	  +python3-paramiko \
-	  +python3-pycparser \
-	  +python3-pynacl
+      +python3-bcrypt \
+      +python3-cffi \
+      +python3-cryptography \
+      +python3-paramiko \
+      +python3-pycparser \
+      +python3-pynacl
 endef
 
 define Package/python3-sshnpdpy/description

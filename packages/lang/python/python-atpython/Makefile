@@ -30,13 +30,13 @@ define Package/python3-atpython
   URL:=https://github.com/atsign-foundation/at_python
   DEPENDS:=\
       +python3-light \
-	  +python3-cffi \
-	  +python3-cryptography \
-	  +python3-dateutil \
-	  +python3-pycparser \
-	  +python3-pytest \
-	  +python3-requests \
-	  +python3-six
+      +python3-cffi \
+      +python3-cryptography \
+      +python3-dateutil \
+      +python3-pycparser \
+      +python3-pytest \
+      +python3-requests \
+      +python3-six
 endef
 
 define Package/python3-atpython/description
