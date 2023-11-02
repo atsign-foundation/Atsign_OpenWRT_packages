@@ -13,7 +13,7 @@ easy to run our stuff there.
 
 ### lang/python/atpython
 
-This package ontains our
+This package contains our
 [Python SDK](https://github.com/atsign-foundation/at_python)
 
 ## Development Environment Setup
