@@ -5,17 +5,12 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=sshnpdpy
-PKG_VERSION:=0.3.0
+PKG_NAME:=atsdk
+PKG_VERSION:=0.2.0
 PKG_RELEASE:=1
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/atsign-foundation/sshnoports
-PKG_SOURCE_VERSION:=074699a29e31688dcba8b79fd55433e25c68355e
-
-PKG_BUILD_DEPENDS:=python-poetry-core/host
-
-PYTHON3_PKG_SETUP_DIR=packages/sshnpdpy
+PYPI_NAME:=atsdk
+PKG_HASH:=52f4b56597bdc25725b6e1cf9842800b4194def8b2691d0e9c0bb393f97a486e
 
 PKG_LICENSE:=BSD-3-Clause
 PKG_LICENSE_FILES:=LICENSE
@@ -24,7 +19,7 @@ PKG_MAINTAINER:=Chris Swan <@cpswan>
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
 
-define Package/python3-sshnpdpy
+define Package/python3-atpython
   SECTION:=lang
   CATEGORY:=Languages
   SUBMENU:=Python
@@ -32,19 +27,19 @@ define Package/python3-sshnpdpy
   URL:=https://github.com/atsign-foundation/at_python
   DEPENDS:=\
       +python3-light \
-      +python3-atpython \
-      +python3-bcrypt \
       +python3-cffi \
       +python3-cryptography \
-      +python3-paramiko \
+      +python3-dateutil \
       +python3-pycparser \
-      +python3-pynacl
+      +python3-pytest \
+      +python3-requests \
+      +python3-six
 endef
 
-define Package/python3-sshnpdpy/description
-Atsign SSH No Ports daemon in Python
+define Package/python3-atpython/description
+The atPlatform for Python developers
 endef
 
-$(eval $(call Py3Package,python3-sshnpdpy))
-$(eval $(call BuildPackage,python3-sshnpdpy))
-$(eval $(call BuildPackage,python3-sshnpdpy-src))
+$(eval $(call Py3Package,python3-atpython))
+$(eval $(call BuildPackage,python3-atpython))
+$(eval $(call BuildPackage,python3-atpython-src))
