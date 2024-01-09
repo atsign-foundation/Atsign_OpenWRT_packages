@@ -27,7 +27,7 @@ define Package/python3-sshnpd
   URL:=https://github.com/atsign-foundation/at_python
   DEPENDS:=\
       +python3-light \
-      +python3-atpython \
+      +python3-atsdk \
       +python3-bcrypt \
       +python3-cffi \
       +python3-cryptography \
