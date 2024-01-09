@@ -19,7 +19,7 @@ PKG_MAINTAINER:=Chris Swan <@cpswan>
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
 
-define Package/python3-atpython
+define Package/python3-atsdk
   SECTION:=lang
   CATEGORY:=Languages
   SUBMENU:=Python
@@ -36,10 +36,10 @@ define Package/python3-atpython
       +python3-six
 endef
 
-define Package/python3-atpython/description
+define Package/python3-atsdk/description
 The atPlatform for Python developers
 endef
 
-$(eval $(call Py3Package,python3-atpython))
-$(eval $(call BuildPackage,python3-atpython))
-$(eval $(call BuildPackage,python3-atpython-src))
+$(eval $(call Py3Package,python3-atsdk))
+$(eval $(call BuildPackage,python3-atsdk))
+$(eval $(call BuildPackage,python3-atsdk-src))

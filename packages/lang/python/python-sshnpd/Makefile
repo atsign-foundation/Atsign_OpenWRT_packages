@@ -19,7 +19,7 @@ PKG_MAINTAINER:=Chris Swan <@cpswan>
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/python/python3-package.mk
 
-define Package/python3-sshnpdpy
+define Package/python3-sshnpd
   SECTION:=lang
   CATEGORY:=Languages
   SUBMENU:=Python
@@ -36,10 +36,10 @@ define Package/python3-sshnpdpy
       +python3-pynacl
 endef
 
-define Package/python3-sshnpdpy/description
+define Package/python3-sshnpd/description
 Atsign SSH No Ports daemon in Python
 endef
 
-$(eval $(call Py3Package,python3-sshnpdpy))
-$(eval $(call BuildPackage,python3-sshnpdpy))
-$(eval $(call BuildPackage,python3-sshnpdpy-src))
+$(eval $(call Py3Package,python3-sshnpd))
+$(eval $(call BuildPackage,python3-sshnpd))
+$(eval $(call BuildPackage,python3-sshnpd-src))
