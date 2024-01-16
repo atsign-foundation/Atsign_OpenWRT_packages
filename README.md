@@ -11,10 +11,15 @@ easy to run our stuff there.
 
 ## Packages
 
-### lang/python/atpython
+### lang/python/python-atsdk
 
 This package contains our
 [Python SDK](https://github.com/atsign-foundation/at_python)
+
+### lang/python/python-sshnpd
+
+This package contains our
+[Python NoPorts daemon](https://github.com/atsign-foundation/noports/tree/trunk/packages/python/sshnpd)
 
 ## Development Environment Setup
 
@@ -38,7 +43,7 @@ src-link atsign /home/chris/git/github.com/atsign-foundation/Atsign_OpenWRT_pack
 You'll need to change `/home/chris/git/github.com/atsign-foundation/`
 to wherever you cloned this repo.
 
-### Contributor
+## Contributor
 
 If you'd like to add, modify or improve what's here then please take a look at
 [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidance on how to make a pull
