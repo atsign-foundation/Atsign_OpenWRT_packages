@@ -20,6 +20,11 @@ define Package/athellocmake/description
 	athellocmake is a simple application to demonstrate OpenWRT build system with cmake packages
 endef
 
+define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
+	$(CP) ./src/* $(PKG_BUILD_DIR)/
+endef
+
 define Package/athellocmake/install	
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/athellocmake $(1)/usr/bin/
