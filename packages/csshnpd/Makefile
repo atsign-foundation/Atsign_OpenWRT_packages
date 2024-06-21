@@ -24,12 +24,12 @@ CMAKE_OPTIONS += \
 		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
 
 define Package/csshnpd
-	SECTION:=net
-	CATEGORY:=Network
+	#SECTION:=net
+	CATEGORY:=Atsign
 	DEPENDS:=openssh-keygen
 	TITLE:=NoPorts Daemon
 	URL:=https://noports.com
-	SUBMENU:=SSH
+	#SUBMENU:=SSH
 endef
 
 define Package/csshnpd/description
@@ -43,7 +43,7 @@ endef
 
 define Package/csshnpd/install	
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/athellocmake $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/csshnpd $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,csshnpd))
