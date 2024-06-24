@@ -24,8 +24,8 @@ CMAKE_OPTIONS += \
 		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
 
 define Package/csshnpd
-	#SECTION:=net
-	CATEGORY:=Atsign
+	SECTION:=net
+	CATEGORY:=ssh
 	TITLE:=NoPorts Daemon
 	SELECTS:=openssh-keygen
 	URL:=https://noports.com
