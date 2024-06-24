@@ -4,8 +4,8 @@ PKG_NAME:=csshnpd
 PKG_VERSION:=0.1.0
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/atsign-foundation/noports/archive/c$(PKG_VERSION).tar.gz
+PKG_SOURCE:=c$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/atsign-foundation/noports/archive/
 PKG_HASH:=9461eb7a62c86544a38bf67a69a6c4b9e0719b6e89fa4e1cea95f9cd16858c67
 
 PKG_LICENSE:=BSD-3-Clause
