@@ -25,7 +25,7 @@ CMAKE_OPTIONS += \
 
 define Package/csshnpd
 	SECTION:=net
-	#CATEGORY:=ssh
+	CATEGORY:=Network
 	TITLE:=NoPorts Daemon
 	SELECTS:=openssh-keygen
 	URL:=https://noports.com
