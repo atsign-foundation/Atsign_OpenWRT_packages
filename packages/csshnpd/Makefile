@@ -26,19 +26,14 @@ CMAKE_OPTIONS += \
 define Package/csshnpd
 	#SECTION:=net
 	CATEGORY:=Atsign
-	DEPENDS:=openssh-keygen
 	TITLE:=NoPorts Daemon
+	SELECTS:=openssh-keygen
 	URL:=https://noports.com
 	#SUBMENU:=SSH
 endef
 
 define Package/csshnpd/description
-	A small and portable daemon for NoPorts.
-endef
-
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ./src/* $(PKG_BUILD_DIR)/
+    A small and portable daemon for NoPorts.
 endef
 
 define Package/csshnpd/install	
