@@ -19,6 +19,7 @@ include $(INCLUDE_DIR)/cmake.mk
 CMAKE_OPTIONS += \
         -B build \
 		-S . \
+		-I ./sshnpd/ \
 		-DBUILD_SHARED_LIBS=off \
 		-DCMAKE_C_COMPILER=gcc \
 		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
