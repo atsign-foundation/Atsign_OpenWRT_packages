@@ -22,8 +22,7 @@ CMAKE_OPTIONS += \
 		-S . \
 		-DBUILD_SHARED_LIBS=off \
 		-DCMAKE_C_COMPILER=gcc \
-		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args" \
-		./sshnpd/
+		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
 
 define Package/csshnpd
 	SECTION:=net
