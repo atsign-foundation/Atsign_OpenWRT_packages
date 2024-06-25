@@ -38,7 +38,7 @@ endef
 
 define Package/csshnpd/install	
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/csshnpd $(1)/usr/bin/
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/sshnpd $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,csshnpd))
