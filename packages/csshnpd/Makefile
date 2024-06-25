@@ -17,12 +17,12 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 CMAKE_OPTIONS += \
-        -B build \
+		-B build \
 		-S . \
-		-I ./sshnpd/ \
 		-DBUILD_SHARED_LIBS=off \
 		-DCMAKE_C_COMPILER=gcc \
-		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
+		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args" \
+		./sshnpd/
 
 define Package/csshnpd
 	SECTION:=net
@@ -34,7 +34,7 @@ define Package/csshnpd
 endef
 
 define Package/csshnpd/description
-    A small and portable daemon for NoPorts.
+	A small and portable daemon for NoPorts.
 endef
 
 define Package/csshnpd/install	
