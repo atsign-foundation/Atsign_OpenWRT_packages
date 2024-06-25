@@ -18,7 +18,6 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 CMAKE_OPTIONS += \
-		-B build \
 		-S . \
 		-DBUILD_SHARED_LIBS=off \
 		-DCMAKE_C_COMPILER=gcc \
