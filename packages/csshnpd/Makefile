@@ -26,7 +26,6 @@ define Package/csshnpd
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=NoPorts Daemon
-	SELECTS:=openssh-keygen
 	URL:=https://noports.com
 	SUBMENU:=SSH
 endef
