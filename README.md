@@ -11,15 +11,22 @@ easy to run our stuff there.
 
 ## Packages
 
-### lang/python/python-atsdk
+### csshnpd
 
 This package contains our
-[Python SDK](https://github.com/atsign-foundation/at_python)
+[C NoPorts daemon](https://github.com/atsign-foundation/noports/tree/trunk/packages/c/sshnpd)
 
-### lang/python/python-sshnpd
+### python packages
 
-This package contains our
-[Python NoPorts daemon](https://github.com/atsign-foundation/noports/tree/trunk/packages/python/sshnpd)
+We previously packaged the Python3 atSDK and sshnpd in:
+
+* lang/python/python-atsdk
+* lang/python/python-sshnpd
+
+These have been removed to prevent conflicts with older build tool chains.
+The branch
+[python3-packages](https://github.com/atsign-foundation/Atsign_OpenWRT_packages/tree/python3-packages)
+holds those packages as they were.
 
 ## Development Environment Setup
 

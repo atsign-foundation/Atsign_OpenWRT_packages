@@ -19,8 +19,9 @@ include $(INCLUDE_DIR)/cmake.mk
 CMAKE_OPTIONS += \
 		-S . \
 		-DBUILD_SHARED_LIBS=off \
-		-DCMAKE_C_COMPILER=gcc \
-		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args"
+		-DBUILD_TESTS=off \
+		-DCMAKE_C_COMPILER=$(TARGET_CC) \
+		-DCMAKE_C_FLAGS="-Wno-calloc-transposed-args -Wno-error -pthread -lrt"
 
 define Package/csshnpd
 	SECTION:=net
