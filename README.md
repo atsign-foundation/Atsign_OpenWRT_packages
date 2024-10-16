@@ -16,17 +16,39 @@ easy to run our stuff there.
 This package contains our
 [C NoPorts daemon](https://github.com/atsign-foundation/noports/tree/trunk/packages/c/sshnpd)
 
-### python packages
+#### Installing csshnpd
 
-We previously packaged the Python3 atSDK and sshnpd in:
+Once a .ipk file has been created (e.g. `csshnpd_0.2.0-1_x86_64.ipk`) it
+should be copied to the target OpenWRT system and installed with `opkg`:
 
-* lang/python/python-atsdk
-* lang/python/python-sshnpd
+```sh
+opkg install csshnpd_0.2.0-1_x86_64.ipk
+```
 
-These have been removed to prevent conflicts with older build tool chains.
-The branch
-[python3-packages](https://github.com/atsign-foundation/Atsign_OpenWRT_packages/tree/python3-packages)
-holds those packages as they were.
+NB that command line will vary according to version and platform architecture.
+
+#### Configuring sshnpd
+
+The config is held in `/etc/config/sshnpd`
+
+Use your favourite editor to set `atsign`, `manager` and `device` to the
+atSigns and name you wish to use.
+
+`enabled` needs to be changed to `1`
+
+#### Getting atSign keys in place
+
+sshnpd expect to find keys in `$HOME/.atsign/keys`. For now keys need to be
+activated elsewhere and copied into an `@atsign__key.atKeys` file (where
+`atsign` is replaced with the atSign being used for the device).
+
+#### Starting the daemon
+
+Run:
+
+```sh
+/etc/init.d/sshnpd start
+```
 
 ## Development Environment Setup
 
@@ -49,6 +71,20 @@ src-link atsign /home/chris/git/github.com/atsign-foundation/Atsign_OpenWRT_pack
 
 You'll need to change `/home/chris/git/github.com/atsign-foundation/`
 to wherever you cloned this repo.
+
+## Old packages
+
+### python packages
+
+We previously packaged the Python3 atSDK and sshnpd in:
+
+* lang/python/python-atsdk
+* lang/python/python-sshnpd
+
+These have been removed to prevent conflicts with older build tool chains.
+The branch
+[python3-packages](https://github.com/atsign-foundation/Atsign_OpenWRT_packages/tree/python3-packages)
+holds those packages as they were.
 
 ## Contributor
 

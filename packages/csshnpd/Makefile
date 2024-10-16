@@ -36,8 +36,14 @@ define Package/csshnpd/description
 endef
 
 define Package/csshnpd/install	
-	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_DIR) \
+	    $(1)/usr/bin \
+		$(1)/etc/config \
+		$(1)/etc/init.d
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/sshnpd/sshnpd $(1)/usr/bin/
+	$(INSTALL_BIN) files/csshnpd.init $(1)/etc/init.d/sshnpd
+	$(INSTALL_CONF) files/csshnpd.config \
+	    $(1)/etc/config/sshnpd
 endef
 
 $(eval $(call BuildPackage,csshnpd))
