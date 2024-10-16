@@ -36,7 +36,7 @@ start_instance() {
 
 	config_get home             "$section" home
 	if [ -z "$home" ]; then
-		home='/root/'
+		home='/root'
 	fi
 
 	if [ ! -f "${home}/.atsign/keys/@${atsign}_key.atKeys" ]; then
