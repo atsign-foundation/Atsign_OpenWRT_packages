@@ -6,7 +6,6 @@ START=80
 
 start_instance() {
 	local section="$1"
-	local forwarding
 
 	config_get_bool enabled     "$section" enabled 1
 	[ "$enabled" != "1" ] && return 0
@@ -36,7 +35,11 @@ start_instance() {
 
 	config_get home             "$section" home
 	if [ -z "$home" ]; then
-		home='/root'
+        if [ "$user" = "root" ]; then
+				home='/root'
+        else
+				home="/home/${user}"
+        fi
 	fi
 
 	if [ ! -f "${home}/.atsign/keys/${atsign}_key.atKeys" ]; then
