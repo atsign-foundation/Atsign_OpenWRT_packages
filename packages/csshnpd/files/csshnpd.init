@@ -39,18 +39,18 @@ start_instance() {
 		home='/root'
 	fi
 
-	if [ ! -f "${home}/.atsign/keys/@${atsign}_key.atKeys" ]; then
+	if [ ! -f "${home}/.atsign/keys/${atsign}_key.atKeys" ]; then
 		echo "sshnpd: WARNING atsign keys not found in default location"
 	fi
 
-	if [ ! -f "${home}/.ssh" ]; then
+	if [ ! -d "${home}/.ssh" ]; then
 		mkdir ${home}/.ssh
-        chmod 700 ${home}/.ssh
+		chmod 700 ${home}/.ssh
 	fi
 
 	if [ ! -f "${home}/.ssh/authorized_keys" ]; then
 		touch ${home}/.ssh/authorized_keys
-        chmod 600 ${home}/.ssh/authorized_keys
+		chmod 600 ${home}/.ssh/authorized_keys
 	fi
 
 	config_get args             "$section" args
