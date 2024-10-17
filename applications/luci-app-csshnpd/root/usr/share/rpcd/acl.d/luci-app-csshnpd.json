@@ -1,0 +1,11 @@
+{
+	"luci-app-csshnpd": {
+		"description": "Grant UCI access for luci-app-csshnpd",
+		"read": {
+			"uci": [ "sshnpd" ]
+		},
+		"write": {
+			"uci": [ "sshnpd" ]
+		}
+	}
+}
