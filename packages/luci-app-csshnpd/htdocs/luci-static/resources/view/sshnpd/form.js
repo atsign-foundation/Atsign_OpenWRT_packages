@@ -25,13 +25,22 @@ return view.extend({
 		m = new form.Map('sshnpd', _('NoPorts'),
 			_('Daemon Configuration'));
 
-		s = m.section(form.TypedSection, 'first', _('first section'));
+		s = m.section(form.TypedSection, 'sshnpd', _('sshnpd config'));
 		s.anonymous = true;
 
-		s.option(form.Value, '@sshnpd[0].atsign', _('Device atSign'),
+		s.option(form.Value, 'atsign', _('Device atSign'),
 			_('The device atSign e.g. @device'));
 
-		o = s.option(form.Flag, '@sshnpd[0].enabled', _('Enabled'),
+		s.option(form.Value, 'manager', _('Manager atSign'),
+			_('The device atSign e.g. @manager'));
+
+		s.option(form.Value, 'device', _('Device name'),
+			_('The name for this device e.g. openwrt'));
+
+		s.option(form.Value, 'args', _('Additional arguments'),
+			_('Further command line arguments for the NoPorts daemon'));
+
+		o = s.option(form.Flag, 'enabled', _('Enabled'),
 			_('Check here to enable the service'));
 		o.default = '1';
 		o.rmempty = false;

@@ -1,7 +1,7 @@
 {
 
   "admin/network/sshnpd": {
-    "title": "sshnpd",
+    "title": "NoPorts",
     "order": 70,
     "action": {
       "type": "view",
