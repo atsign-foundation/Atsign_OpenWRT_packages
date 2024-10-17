@@ -3,7 +3,7 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI config  app for NoPorts daemon (csshnpd_)
+LUCI_TITLE:=LuCI config  app for NoPorts daemon (csshnpd)
 LUCI_DEPENDS:=+luci-base +csshnpd
 LUCI_PKGARCH:=all
 
