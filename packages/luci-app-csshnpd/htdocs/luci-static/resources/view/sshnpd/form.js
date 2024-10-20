@@ -32,7 +32,7 @@ return view.extend({
 			_('The device atSign e.g. @device'));
 
 		s.option(form.Value, 'manager', _('Manager atSign'),
-			_('The device atSign e.g. @manager'));
+			_('The manager atSign e.g. @manager'));
 
 		s.option(form.Value, 'device', _('Device name'),
 			_('The name for this device e.g. openwrt'));
