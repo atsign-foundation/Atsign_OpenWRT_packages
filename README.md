@@ -18,7 +18,7 @@ This package contains our
 
 #### Installing csshnpd
 
-Once a .ipk file has been created (e.g. `csshnpd_0.2.0-1_x86_64.ipk`) it
+Once an .ipk file has been created (e.g. `csshnpd_0.2.0-1_x86_64.ipk`) it
 should be copied to the target OpenWRT system and installed with `opkg`:
 
 ```sh
@@ -49,6 +49,36 @@ Run:
 ```sh
 /etc/init.d/sshnpd start
 ```
+
+### luci-app-csshnpd
+
+This is a LuCI app that can be used to configure sshnpd without editing
+`/etc/config/sshnpd` at the command line
+
+#### Installing luci-app-csshnpd
+
+Once an .ipk file has been created (e.g.
+`luci-app-csshnpd_24.294.58918.40ad298_all.ipk`) it should be copied to
+the target OpenWRT system and installed with `opkg`:
+
+```sh
+opkg install luci-app-csshnpd_24.294.58918.40ad298_all.ipk
+```
+
+#### Using luci-app-csshnpd
+
+Once installed there will be a `NoPorts` menu item under `Network`:
+
+![NoPorts menu item](images/NoPorts_LuCI_menu.jpg)
+
+Clicking that brings up the sshnpd config form:
+
+![NoPorts configuration](images/NoPorts_LuCI_form.jpg)
+
+Fill out the atSigns and device name, then click the enable button.
+
+To start the daemon for the first time go to System->Startup then
+press the `Start` button beside `sshnpd`.
 
 ## Development Environment Setup
 
