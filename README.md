@@ -11,14 +11,14 @@ easy to run our stuff there.
 
 ## Packages
 
-### Upstream support in SNAPSHOT
+### Upstream support in 25.12 and SNAPSHOT
 
 [csshnpd](https://github.com/openwrt/packages/tree/master/net/csshnpd)
 has been accepted upstream in
 [openwrt/packages](https://github.com/openwrt/packages), and
 [luci-app-csshnpd](https://github.com/openwrt/luci/tree/master/applications/luci-app-csshnpd)
 is in [openwrt/luci](https://github.com/openwrt/luci). So if you're running
-a SNAPSHOT build, NoPorts can be installed with:
+25.12 or a SNAPSHOT build, NoPorts can be installed with:
 
 ```sh
 apk update
@@ -31,17 +31,6 @@ or if you just want the command line app:
 apk update
 apk add csshnpd
 ```
-
-### Package repo for OpenWrt 23.05 and 24.10
-
-An automated build based on this repo -
-[OpenWrt-publishing](https://github.com/atsign-foundation/OpenWrt-publishing/)
-creates the
-[Atsign opkg repository](https://atsign-foundation.github.io/OpenWrt-releases/)
-
-Follow the
-[install guide](https://github.com/atsign-foundation/OpenWrt-releases/tree/gh-pages#readme)
-for instructions on adding the repo key and packages from it.
 
 ### csshnpd
 
